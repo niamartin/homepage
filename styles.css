@@ -76,10 +76,11 @@ h2 {
 }
 .standardgrid {
   display: grid;
-  grid-template-rows: repeat(16,1fr);
+  grid-template-rows: repeat(16,50px);
   grid-template-columns: repeat(9, 1fr);
   grid-gap: .6em;
   margin: 0;
+  overflow: hidden;
 }
 
 .background {

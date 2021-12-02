@@ -149,12 +149,7 @@ padding: 0em 3em;
 }
 
 /* ------ ABOUT STYLES ------- */
-#about  img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  overflow: hidden;
-}
+
 
 #about h1 {
   color: var(--mid);

@@ -31,7 +31,6 @@ font-style: normal;
 /* ------ BASE STYLES ------- */
 * {
   box-sizing: border-box;
-  border: hotpink 1pt solid;
 }
 
 body {

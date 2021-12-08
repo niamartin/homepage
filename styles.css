@@ -366,66 +366,93 @@ footer {
 #photo img:nth-child(4) {
 	grid-area: 3 / 2;
 }
+
 /* COLLECTION  */
 .coll-head {
-	grid-area: 2 / 2 / span 2 / span 7;
 	display: grid;
 	margin: 1.2em;
-	grid-template-columns: 50px 50px 50px;
+	grid-template-columns: 20vw 35vw 35vw;
 	grid-template-rows: 50px 50px 50px;
+	align-items: center;
 }
 .coll-numbers {
-	grid-area: 1 / 1 / span 2 / span 1;
+	grid-area: 2 / 1 / span 2 / span 1;
 	font-size: 5em;
+	justify-self: center;
 	margin: 0;
 }
 .coll-name {
-	grid-area: 1 / 2 / span 1 / span 3;
+	grid-area: 1 / 1 / span 3 / span 3;
 	display: grid;
-	gap: 0.2em;
+	grid-template-rows: 0.68em 0.68em;
+	opacity: 0.5;
+	font-size: 6.2em;
+	text-transform: uppercase;
+	line-height: 1em;
+	gap: 0.1em;
+	justify-content: center;
+	align-content: center;
+	color: var(--mid);
+	z-index: -1;
+	align-items: center;
+	justify-items: end;
+}
+
+#c1 :nth-child(1) {
+	margin: 0;
+	grid-area: 1 / 1 / span 1 / span 1;
+	overflow: hidden;
+}
+#c1 :nth-child(2) {
+	margin: 0;
+	grid-area: 2 / 1 / span 1 / span 1;
+	overflow: hidden;
 }
 .coll-sub {
-	grid-area: 3 / 2 / span 1 / span 3;
+	grid-area: 2 / 2 / span 1 / span 2;
 	font-size: 1.3em;
 	font-family: bree;
+	letter-spacing: 0.2em;
+	font-weight: 300;
 }
 .coll-grid img {
 	width: 100%;
 	height: 100%;
 }
 .coll-grid {
-	grid-area: 4 / 1 / span 14 / span 8;
 	display: grid;
-	grid-template-columns: repeat(8, 12vw);
-	grid-template-rows: repeat(14, 55px);
+	grid-template-columns: repeat(10, 9.5vw);
+	grid-template-rows: repeat(20, 40px);
 	overflow: clip;
 }
 #cdc-grid img:nth-child(1) {
-	grid-area: 1 / 1 / span 14 / span 8;
+	grid-area: 1 / 1 / span 20 / span 10;
 	object-fit: cover;
 	filter: blur(3px) saturate(0);
-	z-index: -1;
+	opacity: 0.7;
+	z-index: -2;
 }
 
 #cdc-grid img:nth-child(2) {
-	grid-area: 2 /2 / span 3 / span 4;
+	grid-area: 2 /2 / span 4 / span 6;
 	object-fit: cover;
 }
 
 #cdc-grid img:nth-child(3) {
-	grid-area: 4 /5 / span 5 / span 4;
+	grid-area: 5 /6 / span 6 / span 4;
 	object-fit: cover;
 	z-index: -1;
 }
-#cdc-grid img:nth-child(4) {
-	grid-area: 8 / 2 / span 4 / span 4;
+#cdc-grid img:nth-child(5) {
+	grid-area: 10 / 2 / span 5 / span 6;
 	object-fit: cover;
 }
 
-#cdc-grid img:nth-child(5) {
-	grid-area: 11 /4 / span 3 / span 5;
+#cdc-grid img:nth-child(4) {
+	grid-area: 14 /5 / span 6 / span 5;
 	object-fit: cover;
 }
+
 /* MEDIA QUERIES
 ----------------------------------------------- */
 @media (min-width: 800px) {

@@ -370,6 +370,7 @@ footer {
 .coll-head {
 	grid-area: 2 / 2 / span 2 / span 7;
 	display: grid;
+	margin: 1.2em;
 	grid-template-columns: 50px 50px 50px;
 	grid-template-rows: 50px 50px 50px;
 }
@@ -395,7 +396,7 @@ footer {
 .coll-grid {
 	grid-area: 4 / 1 / span 14 / span 8;
 	display: grid;
-	grid-template-columns: repeat(8, 44px);
+	grid-template-columns: repeat(8, 12vw);
 	grid-template-rows: repeat(14, 55px);
 	overflow: clip;
 }
@@ -407,12 +408,12 @@ footer {
 }
 
 #cdc-grid img:nth-child(2) {
-	grid-area: 2 /1 / span 3 / span 5;
+	grid-area: 2 /2 / span 3 / span 4;
 	object-fit: cover;
 }
 
 #cdc-grid img:nth-child(3) {
-	grid-area: 4 /5 / span 5 / span 3;
+	grid-area: 4 /5 / span 5 / span 4;
 	object-fit: cover;
 	z-index: -1;
 }

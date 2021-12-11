@@ -26,6 +26,13 @@ font-family: essonnes-display, serif;
 font-weight: 400;
 font-style: normal;
 
+
+#273E5C
+#9AC1F5
+#273E5C
+#A88D59
+#5C461E
+
 */
 
 /* ------ BASE STYLES ------- */
@@ -66,6 +73,91 @@ h1 {
 
 h2 {
 	font-size: 1.1em;
+}
+li {
+	list-style: none;
+}
+.menu-button {
+	margin: 1em;
+}
+.menu-close,
+.search {
+	display: flex;
+	padding: 1.2em;
+}
+.navbar {
+	background-color: rgba(39, 64, 95, 0.517);
+	margin: 0.6em;
+	padding: 0.3em;
+	border-radius: 0.2em;
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-content: space-between;
+	align-items: center;
+}
+.nav-close {
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-content: space-between;
+	align-content: center;
+	grid-area: 1 / 1 / span 1 / span 3;
+	padding: 1em;
+	max-height: 3em;
+	position: relative;
+	top: 5vh;
+}
+nav {
+	display: none;
+}
+
+.nav-active nav {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	text-decoration: none;
+	position: fixed;
+	top: 0em;
+	background-color: var(--dark);
+	height: 100vh;
+	width: 100%;
+	justify-self: center;
+	z-index: 2;
+	grid-area: 1 / 1 / span 5 / span 1;
+}
+.nav-active nav a {
+	display: flex;
+	flex-direction: column;
+	text-decoration: none;
+	justify-content: center;
+	color: var(--mid);
+	font-size: 1em;
+	padding: 0em 0em 0em 3em;
+	font-family: essonnes-display, serif;
+}
+
+.nav-active img:nth-child(1) {
+	grid-area: 1 / 1 / span 1 / span 1;
+	padding: 1em;
+}
+.nav-active img:nth-child(6) {
+	grid-area: 6 / 2 / span 1 / span 2;
+	padding: 3em;
+}
+
+.nav-active a:nth-child(2) {
+	grid-area: 2 / 1 / span 1 / span 2;
+}
+.nav-active a:nth-child(3) {
+	grid-area: 3 /1 / span 1 / span 2;
+}
+.nav-active a:nth-child(4) {
+	grid-area: 4 /1 / span 1 / span 2;
+}
+.nav-active a:nth-child(5) {
+	grid-area: 5 /1 / span 1 / span 2;
+}
+.nav-active a:nth-child(7) {
+	display: flex;
+	grid-area: 6 / 1 / span 1 / span 1;
 }
 
 footer {
@@ -353,21 +445,24 @@ footer {
 	grid-template-columns: 1fr 1fr;
 	justify-items: center;
 }
+#photo a {
+	padding: 0;
+}
 
-#photo img:nth-child(2) {
-	grid-area: 2 / 2;
-}
-#photo img:nth-child(3) {
-	grid-area: 3 / 1;
-}
-#photo img:nth-child(5) {
+#photo a:nth-child(2) {
 	grid-area: 2 / 1;
 }
-#photo img:nth-child(4) {
+#photo a:nth-child(3) {
+	grid-area: 2 / 2;
+}
+#photo a:nth-child(4) {
+	grid-area: 3 / 1;
+}
+#photo a:nth-child(5) {
 	grid-area: 3 / 2;
 }
 
-/* COLLECTION  */
+/* COLLECTION__________GRIDS  */
 .coll-head {
 	display: grid;
 	margin: 1.2em;

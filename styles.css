@@ -8,6 +8,7 @@
 	--mid: #d1c6b8;
 	--midlight: #d1c6b874;
 }
+
 /* ------ BASE STYLES ------- */
 
 * {
@@ -206,7 +207,7 @@ h2 {
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-	grid-area: 2 / 1 / span 11 / span 8;
+	grid-area: 2 / 1 / span 10 / span 8;
 	border-right: solid var(--light) 1.5px;
 	border-bottom: solid var(--light) 1.5px;
 }
@@ -214,9 +215,9 @@ h2 {
 
 #welcome main {
 	display: grid;
-	grid-area: 10 / 2 / span 6 / span 7;
+	grid-area: 9 / 2 / span 5 / span 7;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 150px 1fr 1fr;
+	grid-template-rows: 3fr 2fr 1fr;
 }
 #welcome main > h1 {
 	grid-area: 1 / 1 / span 1 / span 2;
@@ -236,18 +237,17 @@ h2 {
 }
 #about main {
 	display: grid;
-	grid-area: 2 / 1 / span 10 / span 7;
-
-	grid-template-columns: repeat(6, 58px);
+	grid-area: 2 / 1 / span 20 / span 9;
+	grid-template-columns: repeat(11, 1fr);
+	grid-template-rows: repeat(11, 1fr);
 	margin: 0.5em;
-	justify-content: space-between;
 }
 
 #about main > h1 {
-	grid-area: 1 / 1 / span 1 / span 2;
+	grid-area: 1 / 1 / span 2 / span 5;
 }
 #about main > .sectionh {
-	grid-area: 1 / 1 / span 1 / span 6;
+	grid-area: 1 / 1 / span 2 / span 10;
 	font-size: 6.5em;
 }
 
@@ -255,50 +255,62 @@ h2 {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	grid-area: 2 / 3 / span 4 / span 4;
-	opacity: 0.7;
 	z-index: -1;
 }
-#about main > p:nth-child(4) {
-	grid-area: 4 / 2 / span 3 / span 6;
+#about main > img:nth-child(3) {
+	grid-area: 3 / 5 / span 4 / span 7;
+	opacity: 0.7;
+	z-index: -2;
 }
+#about main > p:nth-child(4) {
+	grid-area: 5 / 2 / span 3 / span 9;
+}
+
 #about main > img:nth-child(5) {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	grid-area: 7 / 1 / span 3 / span 4;
-	opacity: 0.5;
+	grid-area: 8 / 1 / span 3 / span 7;
+	opacity: 0.8;
 	z-index: -2;
 }
 #about main > p:nth-child(6) {
-	grid-area: 9 / 3 / span 3 / span 4;
+	grid-area: 8 / 8 / span 3 / span 4;
+	padding-left: 0.5em;
 }
 #about main > a {
-	grid-area: 12 / 3 / span 1 / span 4;
+	grid-area: 12 / 5 / span 2 / span 6;
 	display: grid;
-	grid-template-columns: 125px 35px;
+	grid-template-columns: 2fr 1fr;
 	align-items: center;
-	gap: 1em;
+	gap: 0.8em;
+	padding: 0.6em;
 	border: var(--light) 1px solid;
-	margin: 0.8em;
+	margin: 0.3em;
 }
 #about footer {
 	grid-area: 19 / 2 / span 1 / span 2;
 }
+/* ------ FEAT STYLES ------- */
 #feat main {
 	display: grid;
-	grid-area: 2 / 1 / span 10 / span 7;
-	grid-template-columns: repeat(6, 58px);
+	grid-area: 2 / 1 / span 20 / span 9;
+	grid-template-columns: repeat(6, 1fr);
 	margin: 0.5em;
 	justify-content: space-between;
 }
 #feat main > h1 {
 	grid-area: 1 / 1 / span 1 / span 2;
-	font-size: 4em;
+	font-size: 5em;
 }
 #feat main > .sectionh {
 	grid-area: 1 / 1 / span 1 / span 6;
-	font-size: 3em;
+	font-size: 4em;
+	line-height: 1em;
+	letter-spacing: -0.05em;
+	grid-template-rows: 0.7em 0.7em;
+	gap: 0.2em;
+}
+#feat main > p:nth-child(3) {
+	grid-area: 2 / 2 / span 4 / span 4;
+	padding: 0.2em;
 }
 #feat main > .twocol img {
 	width: 100%;
@@ -308,30 +320,26 @@ h2 {
 #feat main > .twocol {
 	grid-template-columns: 1fr;
 	grid-template-rows: repeat(4, 1fr);
-	grid-area: 2 / 1 / span 8 / span 6;
+	grid-area: 6 / 1 / span 8 / span 6;
 	padding: 0.6em;
 	gap: 0.6em;
 	background: var(--midlight);
-	margin-top: 0.8em;
 }
-#feat main > p:nth-child(4) {
-	grid-area: 10 / 2 / span 4 / span 5;
-	padding: 0.2em;
-}
+
 #feat main > a:nth-child(5) {
-	grid-area: 14 / 3 / span 1 / span 4;
-	padding: 1em;
+	grid-area: 14 / 4 / span 1 / span 3;
+	padding: 0.9em;
 	display: grid;
-	grid-template-columns: 130px 40px;
+	grid-template-columns: 2fr 1fr;
 	align-items: center;
-	gap: 1em;
+	gap: 0.5em;
 	border: var(--light) 1px solid;
 	margin: 0.8em;
 }
 /* ------ PORTFOLIO STYLES ------- */
 #port main {
 	display: grid;
-	grid-area: 2 / 1 / span 10 / span 7;
+	grid-area: 2 / 1 / span 13 / span 9;
 	grid-template-columns: repeat(6, 58px);
 	margin: 0.5em;
 	justify-content: space-between;
@@ -350,7 +358,7 @@ h2 {
 }
 .port-bar {
 	display: grid;
-	grid-template-rows: 70px 70px 70px;
+	grid-template-rows: repeat(3, 1fr);
 	gap: 1.3em;
 	grid-area: 3/ 1 / span 2 / span 6;
 	justify-items: center;
@@ -360,7 +368,12 @@ h2 {
 }
 .port-bar > span {
 	border: 1px solid var(--light);
-	padding: 0.8em 1.2em;
+	padding: 0.8em 2.2em;
+	font-family: essonnes-display, serif;
+	font-weight: 300;
+	font-size: 1.1em;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
 }
 .port-back {
 	display: none;

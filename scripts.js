@@ -11,47 +11,42 @@ function nav(tgl = 'toggle' , cls = 'nav-active') {
     }
 } 
 nav()
-function designs(tgl = 'des-enter' , cls = 'designs-active') {
-    if (document.querySelector(`.${tgl}`)) {
-        document.querySelector(`.${tgl}`).addEventListener('click', 
-            () => { document.body.classList.toggle(cls) }
-        )
-    }
-} 
-designs()
-function motion(tgl = 'mot-enter' , cls = 'motion-active') {
-    if (document.querySelector(`.${tgl}`)) {
-        document.querySelector(`.${tgl}`).addEventListener('click', 
-            () => { document.body.classList.toggle(cls) }
-        )
-    }
-} 
-motion()
-function photo(tgl = 'photo-enter' , cls = 'photo-active') {
-    if (document.querySelector(`.${tgl}`)) {
-        document.querySelector(`.${tgl}`).addEventListener('click', 
-            () => { document.body.classList.toggle(cls) }
-        )
-    }
-} 
-photo()
-function back(tgl = 'port-back' , cls = 'designs-active') {
-    if (document.querySelector(`.${tgl}`)) {
-        document.querySelector(`.${tgl}`).addEventListener('click', 
-            () => { document.body.classList.toggle(cls) }
-        )
-    }
-} 
-back()
-function back2(tgl = 'port-back' , cls = 'motion-active') {
-    if (document.querySelector(`.${tgl}`)) {
-        document.querySelector(`.${tgl}`).addEventListener('click', 
-            () => { document.body.classList.toggle(cls) }
-        )
-    }
-} 
 
-back2()
+
+/* OFFSCREEN MENU */
+const designs = document.querySelector ('.designs');
+const motion = document.querySelector ('.motion');
+const photo = document.querySelector ('.photo');
+const portbar = document.querySelector ('.port-bar');
+
+const dactive = document.querySelector ('#des');
+const mactive = document.querySelector ('#mot');
+const pactive = document.querySelector ('#pho');
+const back = document.querySelector ('#back');
+
+
+dactive.addEventListener('click',() => {
+    designs.classList.add('designs-active'),
+    portbar.classList.add('port-active')
+}
+)
+mactive.addEventListener('click',() => {
+    motion.classList.add('motion-active'),
+    portbar.classList.add('port-active')
+}
+)
+pactive.addEventListener('click',() => {
+    photo.classList.add('photo-active'),
+    portbar.classList.add('port-active')
+}
+)
+back.addEventListener('click',() => {
+    designs.classList.remove('designs-active','motion-active','photo-active'),
+    motion.classList.remove('designs-active','motion-active','photo-active'),
+    photo.classList.remove('designs-active','motion-active','photo-active'),
+    portbar.classList.remove('port-active')
+}
+)
 // FORWARDS CLICKS
 
 function toggle(clickTarget, toggleTarget, toggleClass) {
@@ -73,7 +68,6 @@ function toggle(clickTarget, toggleTarget, toggleClass) {
 	}
 	
 }
-
 
 
 

@@ -556,3 +556,48 @@ h2 {
 .photo-active > h3:nth-child(7) {
 	grid-area: 15 / 1 / span 2 / span 4;
 }
+/* CONTACT STYLES*/
+#contact main {
+	display: grid;
+	grid-area: 2 / 1 / span 14 / span 9;
+	grid-template-columns: repeat(8, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	margin: 0.5em;
+	gap: 3em 0;
+}
+#contact main > h1 {
+	grid-area: 1 / 1 / span 1 / span 2;
+	font-size: 5em;
+}
+#contact main > .sectionh {
+	grid-area: 1 / 1 / span 1 / span 11;
+	font-size: 4em;
+	line-height: 1em;
+	letter-spacing: 0;
+	grid-template-rows: 0.7em 0.7em;
+	gap: 0.2em;
+}
+#contact main > p:nth-child(3) {
+	grid-area: 2 / 2 / span 1 / span 6;
+	margin: 0;
+}
+#contact main > button:nth-child(5) {
+	grid-area: 4 / 2 / span 1 / span 6;
+	padding: 0.9em;
+	display: grid;
+	grid-template-columns: 1fr;
+	align-items: center;
+	gap: 0.5em;
+	border: var(--light) 1px solid;
+	margin: 1em;
+	background: none;
+	line-height: 1.5em;
+}
+.cont-info {
+	display: grid;
+	grid-area: 3/2 / span 1 / span 8;
+	grid-template-rows: repeat(3, 0.2fr);
+	grid-template-columns: 0.5fr 3fr;
+	justify-items: self-start;
+	align-items: center;
+}
